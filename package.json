@@ -1,0 +1,20 @@
+{
+  "name": "html-scss-jquery-template",
+  "version": "1.0.0",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "reload": "^3.2.0",
+    "sass": "^1.53.0",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "scripts": {
+    "start": "sass --watch --style=compressed assets/scss/main.scss:dist/css/style.css & watchify assets/js/main.js -v -o dist/js/main.js & reload -b",
+    "compile:sass": "sass --watch --style=compressed assets/scss/main.scss:dist/css/style.css",
+    "watch": "reload -b",
+    "compile:js": "browserify assets/js/main.js -o dist/js/main.js",
+    "watch:js": "watchify assets/js/main.js -v -o dist/js/main.js"
+  }
+}
